@@ -40,12 +40,21 @@ function addTodo() {
   const inputName = document.querySelector('.todo-name');
   const inputDate = document.querySelector('.todo-date');
   const name = inputName.value.trim();
-  const date = inputDate.value.trim();
+  let date = inputDate.value.trim();
 
-  if (name) {
+    if (date==='') {
+      const today = new Date().toISOString().split('T')[0];
+      date = today;
+    }
+
+    if (name === '') {
+      alert('Please enter a todo name');
+      return;
+    }
+
     todoList.push({ name, date });
     saveToLocalStorage(); 
-  }
+  
 
   inputName.value = ''; 
   renderTodoList();
