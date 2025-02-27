@@ -27,13 +27,21 @@ body {
   align-items: center;
 }
 
-.todo-add,
-.todo-name {
+.todo-add  {
   background-color: rgb(255, 228, 195);
   border-radius: 10px;
   border: 1px solid rgba(61, 61, 40, 0.336);
   padding: 5px;
   flex: 1;
+}
+
+.todo-name {
+  background-color: rgb(106, 188, 199);
+  border-radius: 10px;
+  border: 1px solid rgba(129, 187, 189, 0.336);
+  padding: 5px;
+  flex: 1;
+  
 }
 
 .todo-name::placeholder {
@@ -43,11 +51,23 @@ body {
 .todo-add {
   color: rgba(61, 61, 40, 0.726);
   cursor: pointer;
+  height: 30px;
 }
 
 .todo-add:hover {
   background-color: rgba(216, 205, 155, 0.801);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.todo-date {
+  text-align: center;
+  background-color: rgb(139, 187, 139);
+  border-radius: 10px;
+  border: 1px solid rgba(61, 61, 40, 0.336);
+  padding: 5px;
+  flex: 0;
+  height: 15px;
+  white-space: nowrap; 
 }
 
 .todo-name:focus {
@@ -104,3 +124,6 @@ body {
 .todo-delete:hover {
   background-color: rgb(150, 70, 90);
 }
+
+
+ 
